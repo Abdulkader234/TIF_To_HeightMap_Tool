@@ -5,7 +5,7 @@ The Heightmap Import Tool plugin allows users to import GeoTIFF heightmap files 
 
 - **Plugin Name:** TIF_To_HeightMap_Tool
 - **Current Version:** 1.0.0
-- **Supported Unreal Engine Versions:** 5.2+
+- **Supported Unreal Engine Versions:** 5.6+
 - **Platforms:** Windows
 - **Intended Audience:** Artists, Technical Artists
 

@@ -45,7 +45,7 @@ After restarting Unreal Engine, verify the plugin is enabled by checking:
 **Edit → Plugins → Importers → TIF_To_HeightMap_Tool**
 
 ### 4.2 Basic Workflow
-1. Open the plugin via Window → TIF_To_HeightMap_Tool
+1. In the Content Browser, navigate to the plugin folder, locate the TIF_To_HeightMap_Tool Editor Utility Widget (EUW), right-click it and select Run Editor Utility Widget to launch the plugin UI.
 2. Click Browse to select a .tif heightmap file from disk
 3. The plugin automatically converts and imports the file
 4. Review the texture metadata and scale values
@@ -83,10 +83,17 @@ After restarting Unreal Engine, verify the plugin is enabled by checking:
 ---
 
 ## 6. Usage Guide
+### Launching the Plugin
+
+Before importing, you need to activate the plugin UI:
+1. In the Content Browser, navigate to the TIF_To_HeightMap_Tool plugin folder
+2. Locate the Editor Utility Widget (EUW)
+3. Right-click it and select **Run Editor Utility Widget**
+4. The plugin UI will now open and is ready to use
 
 ### Importing a Heightmap
 
-1. Click **Browse** and select a valid `.tif` or `.tiff` file
+1. Click **Browse** and select a valid `.tif` or `.tiff` file. The file must be square (e.g. 2048×2048) and single-band grayscale
 2. Plugin automatically converts the file to 16-bit PNG
 3. Asset is saved to `/Game/ImportedHeightmaps/`
 4. Review the displayed metadata
@@ -114,6 +121,7 @@ After restarting Unreal Engine, verify the plugin is enabled by checking:
 - Very large TIF files (4K+) may use significant RAM during conversion
 - Scale values must be applied manually in Landscape Mode
 - NoData value is hardcoded to `-9999` (standard GIS convention)
+- TIF file must be square (e.g. 2048×2048). Non-square files are not supported
 ---
 
 ## 9. Troubleshooting
@@ -128,6 +136,7 @@ After restarting Unreal Engine, verify the plugin is enabled by checking:
 | "File already exists" | Asset already imported | Use existing asset or delete it first |
 | "Import failed" | Unknown Unreal error | Check **Window → Output Log** for details |
 | XY or Z Scale shows 0 | Resolution = 0 or flat terrain | Set a valid resolution and check height range |
+| Landscape distorted or incorrect scale | Non-square TIF file used | Re-export your heightmap as a square resolution (e.g. 2048×2048) |
 
 ---
 

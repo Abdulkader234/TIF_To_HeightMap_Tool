@@ -122,6 +122,7 @@ Before importing, you need to activate the plugin UI:
 - Scale values must be applied manually in Landscape Mode
 - NoData value is hardcoded to `-9999` (standard GIS convention)
 - TIF file must be square (e.g. 2048×2048). Non-square files are not supported
+- > **Note on Python Dependencies:** The plugin ships with bundled Python library folders for convenience. However, these versions may not be compatible with all environments. If you encounter import errors or script failures, replace the bundled folders with locally installed versions of the required libraries. This is a known potential issue and not a bug in the plugin itself.
 ---
 
 ## 9. Troubleshooting
@@ -137,6 +138,7 @@ Before importing, you need to activate the plugin UI:
 | "Import failed" | Unknown Unreal error | Check **Window → Output Log** for details |
 | XY or Z Scale shows 0 | Resolution = 0 or flat terrain | Set a valid resolution and check height range |
 | Landscape distorted or incorrect scale | Non-square TIF file used | Re-export your heightmap as a square resolution (e.g. 2048×2048) |
+| Script fails with missing module or import error | Bundled Python library folders may be incompatible with the user's environment | Replace the included library folders with fresh installations. Run `pip install <library>` or copy compatible versions from your local Python environment into the plugin's library directory |
 
 ---
 

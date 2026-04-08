@@ -71,7 +71,6 @@ After restarting Unreal Engine, verify the plugin is enabled by checking:
 | **Imported Max Height** | 884.5 | Highest elevation value in meters |
 | **HeightRange** | 277.73 | Max - Min height. Used to compute Z scale |
 | **Texture Path** | /Game/ImportedHeightmaps/Tif_height | Content browser path of the saved asset |
-| **Height Image** | (thumbnail) | Visual preview of the converted texture |
 
 ### Landscape Settings Section
 
